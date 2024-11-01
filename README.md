@@ -1,5 +1,5 @@
 
-# PSUC 
+# Problem Solving Using Computer
 
 This repository is dedicated to the programming assignments and projects for the PSUC course, all implemented in the C programming language. The repository is structured to assist in understanding various core concepts of system-level programming using C.
 
