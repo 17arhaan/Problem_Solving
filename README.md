@@ -39,5 +39,5 @@ The project in this repository is licensed under the MIT License - see the [LICE
 ## Contact
 
 - **Name**: Arhaan Girdhar
-- **Email**: [17arhaan@example.com](mailto:arhaan.girdhar@example.com)
+- **Email**: [17arhaan@example.com](mailto:arhaan.girdhar@gmail.com)
 - **GitHub**: [17Arhaan](https://github.com/17Arhaan)
