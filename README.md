@@ -9,7 +9,7 @@ To clone and run the projects stored in this repository, you will need Git and G
 
 ```bash
 # Clone this repository
-git clone https://github.com/17Arhaan/PSUC.git
+git clone https://github.com/17Arhaan/Problem_Solving.git
 # Go into the repository
 cd PSUC
 # Compile the code with GCC
