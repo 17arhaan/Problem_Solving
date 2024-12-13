@@ -1,55 +1,63 @@
 #include<stdio.h>
+int main(){
+    int r1,c1,r2,c2;
+    int res[99][99];
+    printf("\tMatrix 1 --->\n");
+    printf("Enter the number of rows : ");
+    scanf("%d", &r1);
+    printf("Enter the number of cols : ");
+    scanf("%d", &c1);
 
-void matrixMultiplication(int mat1[][100], int mat2[][100], int res[][100], int r1, int c1, int r2, int c2) {
-    for (int i = 0; i < r1; i++) {
-        for (int j = 0; j < c2; j++) {
-            res[i][j] = 0;
-            for (int k = 0; k < c1; k++) {
-                res[i][j] += mat1[i][k] * mat2[k][j];
-            }
-        }
-    }
-}
-
-int main() {
-    int r1, c1, r2, c2;
-
-    printf("Enter rows and columns of first matrix: ");
-    scanf("%d%d", &r1, &c1);
-
-    int mat1[100][100];
-    printf("Enter elements of first matrix:\n");
+    int mat1[r1][c1];
+    printf("Enter Elements --->\n");
     for (int i = 0; i < r1; i++) {
         for (int j = 0; j < c1; j++) {
             scanf("%d", &mat1[i][j]);
         }
     }
+    printf("\tMatrix 2 --->\n");
+    printf("Enter the number of rows : ");
+    scanf("%d", &r2);
+    printf("Enter the number of cols : ");
+    scanf("%d", &c2);
 
-    printf("Enter rows and columns of second matrix: ");
-    scanf("%d%d", &r2, &c2);
-
-    if (c1 != r2) {
-        printf("Matrix multiplication not possible.\n");
-        return 1;
-    }
-
-    int mat2[100][100], res[100][100];
-    printf("Enter elements of second matrix:\n");
+    int mat2[100][100];
+    printf("Enter Elements --->\n");
     for (int i = 0; i < r2; i++) {
         for (int j = 0; j < c2; j++) {
             scanf("%d", &mat2[i][j]);
         }
     }
-
-    matrixMultiplication(mat1, mat2, res, r1, c1, r2, c2);
-
-    printf("\nResult of Matrix Multiplication:\n");
+    printf("\n");
+    printf("\nMatrix 1 :\n");
     for (int i = 0; i < r1; i++) {
-        for (int j = 0; j < c2; j++) {
-            printf("%d\t", res[i][j]);
+        for (int j = 0; j < c1; j++) {
+            printf("%d\t", mat1[i][j]);
         }
         printf("\n");
     }
-
-    return 0;
+    printf("\n");
+    printf("\nMatrix 2 :\n");
+    for (int i = 0; i < r2; i++) {
+        for (int j = 0; j < c2; j++) {
+            printf("%d\t", mat2[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("\nMultiplied Matrix --->\n");
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+            res [i][j] = 0;
+            for (int k = 0 ; k <c1 ; k++){
+                res[i][j] += mat1[i][k] * mat2[k][j];
+            }
+        }
+    }
+    for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c2; j++) {
+        printf("%d\t", res[i][j]);
+    }
+    printf("\n");
+    }
 }
